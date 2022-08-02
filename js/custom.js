@@ -66,3 +66,27 @@ function openCategory(evt, catName) {
     document.getElementById(catName).style.display = "block";
     evt.currentTarget.className += " active";
 } 
+
+function iniciar() { 
+var boton = document.getElementById('boton1');
+var boton = document.getElementById('boton2'); 
+boton1.addEventListener('click', presionar2, false);
+boton2.addEventListener('click', presionar3, false); 
+} 
+
+function presionar2() { 
+var video = document.getElementById('video'); 
+video.play(); 
+var audio=document.getElementById('mireproductor');
+audio.play(); 
+audio.currentTime  = video.currentTime; 
+
+}
+
+function presionar3() { 
+var video=document.getElementById('video'); 
+video.pause(); 
+var audio=document.getElementById('mireproductor'); 
+audio.pause(); 
+} 
+window.addEventListener('load', iniciar, false);
